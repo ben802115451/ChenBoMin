@@ -1,0 +1,9 @@
+{
+	"deploy_info" : [
+		{
+			"app_id": "unknown",
+			"deploy_area" : "c",
+			"is_publish" : 1	
+		}
+	]
+}

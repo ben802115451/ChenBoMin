@@ -1,0 +1,4 @@
+com\digiwin\developer\dwdeveloper\service\impl\DownloadCenterService.class
+com\digiwin\developer\dwdeveloper\service\impl\FileManagementService.class
+com\digiwin\developer\dwdeveloper\service\impl\GoodsThemeService.class
+com\digiwin\developer\dwdeveloper\service\impl\DBConstants.class

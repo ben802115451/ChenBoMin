@@ -1,0 +1,32 @@
+[
+	{
+		"code": "B2BK",
+		"displayName": "B2BK",
+		"onSale": 0,
+		"categoryId": "app"
+	},
+	{
+		"code": "135001",
+		"displayName": "EC經銷商管理",
+		"onSale": 0,
+		"categoryId": "app"
+	},
+	{
+		"code": "135002",
+		"displayName": "EC電子採購",
+		"onSale": 0,
+		"categoryId": "app"
+	},
+	{
+		"code": "135003",
+		"displayName": "雲合同",
+		"onSale": 0,
+		"categoryId": "app"
+	},
+	{
+		"code": "F2018001",
+		"displayName": "員工離職預測",
+		"onSale": 0,
+		"categoryId": "app"
+	}
+]

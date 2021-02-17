@@ -1,0 +1,277 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.digiwin.dwapi</groupId>
+    <artifactId>DWDeployment</artifactId>
+    <version>${env.apiVersion}</version>
+    <packaging>pom</packaging>
+
+    <name>DWDeployment</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+
+        <!-- 本地打開, 簽入時註解下一行  -->
+        <!-- <env.pomVersion>2.1.1.1000</env.pomVersion> -->
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <nexus.ip>10.40.41.220:8081</nexus.ip>
+        <api.version>${env.apiVersion}</api.version>
+        <!-- JUnit test -->
+        <jmockit.version>1.41</jmockit.version>
+        <mockito.version>2.23.4</mockito.version>
+        <junit.surefire.provider.version>1.3.2</junit.surefire.provider.version>
+        <junit.platform.runner.version>1.4.2</junit.platform.runner.version>
+        <junit.plugin.version>5.2.0</junit.plugin.version>
+        <maven.surefire.version>3.0.0-M2</maven.surefire.version>
+        <!-- JUnit test -->
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>snapshots</id>
+            <name>Nexus Snapshots Repository</name>
+            <url>http://${nexus.ip}/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://${nexus.ip}/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+
+    <modules>
+        <module>dwapiplatform-service-interface-dwdeployment</module>
+        <module>dwapiplatform-service-impl-dwdeployment</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.digiwin.dwapi</groupId>
+                <artifactId>dwapiplatform-service-interface-dwdeployment</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <!-- DWService -->
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-service</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+
+        <!-- DWIAM -->
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-iam</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+
+        <!-- DWRedis -->
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-redis</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+
+        <!-- <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>DWConfigCenter</artifactId>
+            <version>${api.version}</version>
+        </dependency> -->
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-container</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+        <!-- <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>DWImplementLocator</artifactId>
+            <version>${api.version}</version>
+        </dependency> -->
+
+        <!-- <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>DWLogManager</artifactId>
+            <version>${api.version}</version>
+        </dependency> -->
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!--<dependency> <groupId>io.zipkin.brave</groupId> <artifactId>brave-instrumentation-dubbo-rpc</artifactId>
+            <version>4.17.2</version> </dependency> -->
+        <!--<dependency> <groupId>io.zipkin.brave</groupId> <artifactId>brave-dubbo</artifactId>
+            <version>1.0.0-SNAPSHOT</version> </dependency> -->
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-metadata</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-dao</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-dao-serializer</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-schedule</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-resourcebundle</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>dwapiplatform-serviceclient</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.digiwin</groupId>
+            <artifactId>DMC</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- JUnit test -->
+        <dependency>
+            <groupId>org.jmockit</groupId>
+            <artifactId>jmockit</artifactId>
+            <version>${jmockit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>${junit.platform.runner.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.plugin.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- JUnit test -->
+    </dependencies>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <compilerArgument>-parameters</compilerArgument>
+                    <testCompilerArgument>-parameters</testCompilerArgument>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!-- JUnit test -->
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+                <configuration>
+                    <skipTests>${env.skipTests}</skipTests>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>${junit.surefire.provider.version}</version>
+                        <scope>compile</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.junit.jupiter</groupId>
+                        <artifactId>junit-jupiter-engine</artifactId>
+                        <version>${junit.plugin.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.junit.vintage</groupId>
+                        <artifactId>junit-vintage-engine</artifactId>
+                        <version>${junit.plugin.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <!-- JUnit test -->
+        </plugins>
+    </build>
+    <profiles>
+        <!-- Jenkins by default defines a property BUILD_NUMBER which is used to
+           enable the profile. -->
+        <profile>
+            <id>jenkins</id>
+            <activation>
+                <property>
+                    <name>env.BUILD_NUMBER</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.2</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <configuration>
+                                    <outputDirectory>${basedir}/target/coverage-reports</outputDirectory>
+                                </configuration>
+                                <id>report</id>
+                                <phase>test</phase>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

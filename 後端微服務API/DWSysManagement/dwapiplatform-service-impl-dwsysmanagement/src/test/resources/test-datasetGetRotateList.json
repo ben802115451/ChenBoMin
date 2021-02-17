@@ -1,0 +1,18 @@
+{
+	"adbanner": [
+			{
+					"rotate_seq": 1,
+					"end_time": "2019/11/27",
+					"image_name": "test1",
+					"start_time": "2019/05/27",
+					"image_id": "0f0544a3-ba20-424f-9379-679de7dc0009"
+			},
+			{
+					"rotate_seq": 2,
+					"end_time": "2019/11/27",
+					"image_name": "test2",
+					"start_time": "2019/05/27",
+					"image_id": "20190814-005"
+				}
+		]
+}

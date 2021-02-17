@@ -1,0 +1,4 @@
+com\digiwin\workorder\dwworkorder\service\IWorkOrderService.class
+com\digiwin\workorder\dwworkorder\service\IWorkOrderTypeService.class
+com\digiwin\workorder\dwworkorder\service\IWorkOrderEngineerService.class
+com\digiwin\workorder\dwworkorder\service\IWorkOrderServiceTypeService.class

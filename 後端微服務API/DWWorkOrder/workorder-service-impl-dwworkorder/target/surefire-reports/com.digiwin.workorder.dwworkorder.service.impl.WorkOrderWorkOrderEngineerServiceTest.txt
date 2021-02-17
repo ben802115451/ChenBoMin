@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.digiwin.workorder.dwworkorder.service.impl.WorkOrderWorkOrderEngineerServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.971 s <<< FAILURE! - in com.digiwin.workorder.dwworkorder.service.impl.WorkOrderWorkOrderEngineerServiceTest
+putIsPrincipal  Time elapsed: 0.357 s  <<< ERROR!
+com.digiwin.app.container.exceptions.DWBusinessException: 找不到指定的工程人員 id = mockId
+	at com.digiwin.workorder.dwworkorder.service.impl.WorkOrderWorkOrderEngineerServiceTest.putIsPrincipal(WorkOrderWorkOrderEngineerServiceTest.java:571)
+

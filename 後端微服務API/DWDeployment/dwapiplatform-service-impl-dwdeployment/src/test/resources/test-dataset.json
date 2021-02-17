@@ -1,0 +1,9 @@
+{
+	"deploy_info" : [
+		{
+			"app_id": "unknown",
+			"deploy_id" : "001",
+			"is_publish" : 1
+		}
+	]
+}

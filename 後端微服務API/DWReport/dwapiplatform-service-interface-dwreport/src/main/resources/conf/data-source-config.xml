@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	">
+
+	<!-- 数据源定义,使用dbcp数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="${jdbcDriverClassName}"></property>
+		<property name="url" value="${dwreportJdbcUrl}"></property>
+		<property name="username" value="${dwreportJdbcUsername}"></property>
+		<property name="password" value="${dwreportJdbcPassword}"></property>
+
+		<!-- 2017-3-23 細部設定 -->
+		<property name="initialSize" value="3" />
+		<property name="minIdle" value="1" />
+		<property name="maxTotal" value="5" />
+		<property name="maxWaitMillis" value="20000" />
+	</bean>
+
+	<bean id="bossDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="${jdbcDriverClassName}"></property>
+		<property name="url" value="${bossJdbcUrl}"></property>
+		<property name="username" value="${bossJdbcUsername}"></property>
+		<property name="password" value="${bossJdbcPassword}"></property>
+
+		<!-- 2017-3-23 細部設定 -->
+		<property name="initialSize" value="3" />
+		<property name="minIdle" value="1" />
+		<property name="maxTotal" value="5" />
+		<property name="maxWaitMillis" value="20000" />
+	</bean>
+
+</beans>

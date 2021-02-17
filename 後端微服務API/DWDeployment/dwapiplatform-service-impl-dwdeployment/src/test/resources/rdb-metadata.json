@@ -1,0 +1,61 @@
+[
+	{
+		"name" : "deploy_info",
+		"fields" : [
+			{	
+				"name" : "deploy_id",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"varchar", "rdbms.size":"0", "rdbms.scale":"0", "rdbms.nullable":"N", "rdbms.primarykey":"Y", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"Y" }
+				] }
+			},
+			{	
+				"name" : "app_id",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"varchar", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			},
+			{	
+				"name" : "deploy_area",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"varchar", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			},
+			{	
+				"name" : "deploy_version",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"varchar", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			},
+			{	
+				"name" : "is_publish",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"varchar", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			},
+			{	
+				"name" : "create_user",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"varchar", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			},
+			{	
+				"name" : "create_time",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"timestamp", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			},
+			{	
+				"name" : "modify_user",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"varchar", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			},
+			{	
+				"name" : "modify_time",
+				"attributes" : { "attributes" : [
+					{ "rdbms.valuetype":"timestamp", "rdbms.size":0, "rdbms.scale":0, "rdbms.nullable":"N", "rdbms.primarykey":"N", "rdbms.versioncontrol":"N", "rdbms.autoincrement":"N" }
+				] }
+			}
+		]
+	}
+]
